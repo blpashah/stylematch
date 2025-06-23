@@ -9,7 +9,7 @@ from style_transfer import apply_histogram_match
 st.title("📸 StyleMatch – Match Your RAW Photos to Your Edited Style")
 
 ref_file = st.file_uploader("Upload your EDITED JPG (Reference Image)", type=["jpg", "jpeg"])
-raw_file = st.file_uploader("Upload your RAW file", type=["cr2", "nef", "arw", "dng"])
+raw_file = st.file_uploader("Upload your UNEDITED JPG (Source Image)", type=["jpg", "jpeg"])
 
 if ref_file and raw_file:
     ref_img = Image.open(ref_file).convert("RGB")
